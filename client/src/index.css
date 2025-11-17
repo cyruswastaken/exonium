@@ -1,0 +1,168 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ... */
+html,
+hody {
+  height: 100%;
+  font-family: "DM Sans", serif !important;
+}
+em-emoji-picker {
+  width: 350px;
+  height: 400px;
+  resize: horizontal;
+  overflow: auto;
+}
+
+/* Custom scrollbar styles */
+.scrollbar {
+  overflow-y: auto;
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: rgba(176, 174, 174, 0.7) #ddd; /* Firefox */
+  transition: scrollbar-color 0.3s ease, scrollbar-width 0.3s ease;
+}
+
+.scrollbar::-webkit-scrollbar {
+  width: 8px; /* Scrollbar width */
+}
+
+.scrollbar::-webkit-scrollbar-track {
+  background: #ddd; /* Track color */
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  background-color: gray; /* Thumb color */
+  border-radius: 100%; /* Rounded edges */
+  transition: background-color 0.3s ease; /* Smooth color change */
+}
+
+.scrollbar:hover::-webkit-scrollbar-thumb {
+  background-color: rgba(180, 188, 208, 0.6); /* Softer hover effect using muted color */
+}
+
+@layer base {
+  :root {
+    /* Light theme - cleaner whites and grays */
+    --background: 0 0% 100%;
+    --foreground: 224 15% 15%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 224 15% 15%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 15% 15%;
+    
+    --primary: 244 63% 69%; /* Landing page blue #5e6ad2 */
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 224 15% 15%;
+    
+    --muted: 220 14% 96%;
+    --muted-foreground: 225 7% 48%;
+    
+    --accent: 220 14% 96%;
+    --accent-foreground: 224 15% 15%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 244 63% 69%;
+    
+    --chart-1: 244 63% 69%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    
+    --radius: 0.5rem;
+    
+    /* Sidebar colors for light theme */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 224 15% 25%;
+    --sidebar-primary: 244 63% 69%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+  .dark {
+    /* Dark theme - matching landing page colors */
+    --background: 210 40% 2%; /* #000212 from landing */
+    --foreground: 220 13% 91%; /* #e6e8ee from landing - softer than white */
+    
+    --card: 220 26% 14%; /* #181a20 from landing */
+    --card-foreground: 220 13% 91%; /* #e6e8ee - consistent softer text */
+    
+    --popover: 220 26% 14%;
+    --popover-foreground: 220 13% 91%; /* #e6e8ee - softer text */
+    
+    --primary: 244 63% 69%; /* #5e6ad2 from landing */
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 220 26% 14%; /* #181a20 */
+    --secondary-foreground: 220 13% 91%; /* #e6e8ee - softer text */
+    
+    --muted: 220 26% 14%;
+    --muted-foreground: 220 13% 69%; /* #b4bcd0 from landing - perfect muted text */
+    
+    --accent: 220 26% 16%; /* Slightly lighter for subtle hover */
+    --accent-foreground: 220 13% 91%; /* #e6e8ee - softer text */
+    
+    --destructive: 0 62% 51%;
+    --destructive-foreground: 220 13% 91%; /* #e6e8ee - softer text */
+    
+    --border: 220 26% 18%; /* Subtle border */
+    --input: 220 26% 14%;
+    --ring: 244 63% 69%;
+    
+    --chart-1: 244 63% 69%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+    
+    /* Sidebar colors matching landing aesthetic */
+    --sidebar-background: 220 26% 14%; /* #181a20 */
+    --sidebar-foreground: 220 13% 91%; /* #e6e8ee - softer text */
+    --sidebar-primary: 244 63% 69%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 26% 16%; /* Softer accent */
+    --sidebar-accent-foreground: 220 13% 91%; /* #e6e8ee - softer text */
+    --sidebar-border: 220 26% 18%;
+    --sidebar-ring: 244 63% 69%;
+  }
+}
+
+/* Custom softer hover effects */
+@layer components {
+  .hover-soft {
+    @apply transition-all duration-300 ease-out;
+  }
+  
+  .hover-soft:hover {
+    @apply bg-accent/30;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  button[data-placeholder] {
+    @apply text-muted-foreground;
+  }
+}

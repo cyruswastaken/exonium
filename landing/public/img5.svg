@@ -1,0 +1,19 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8360c3"/>
+      <stop offset="100%" stop-color="#2ebf91"/>
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#grad5)"/>
+  <rect x="150" y="150" width="500" height="300" fill="rgba(255,255,255,0.1)" rx="15"/>
+  <!-- Gear Icons -->
+  <circle cx="300" cy="280" r="40" stroke="rgba(255,255,255,0.4)" stroke-width="8" fill="none"/>
+  <circle cx="300" cy="280" r="15" fill="rgba(255,255,255,0.3)"/>
+  <circle cx="450" cy="320" r="30" stroke="rgba(255,255,255,0.3)" stroke-width="6" fill="none"/>
+  <circle cx="450" cy="320" r="10" fill="rgba(255,255,255,0.2)"/>
+  <circle cx="550" cy="250" r="25" stroke="rgba(255,255,255,0.3)" stroke-width="5" fill="none"/>
+  <circle cx="550" cy="250" r="8" fill="rgba(255,255,255,0.2)"/>
+  <text x="400" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#ffffff">Automation</text>
+  <text x="400" y="420" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="rgba(255,255,255,0.8)">Streamline repetitive tasks</text>
+</svg>
